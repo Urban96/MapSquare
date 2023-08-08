@@ -1,0 +1,135 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <input type="hidden" id="feature-type" name="feature-type" value="">
+    <!-- Form -->
+    <h5>Select type</h5>
+    <div class="mb-4">
+      <label class="my-1 me-2" for="symbology-type">Type</label>
+      <select class="form-select" id="symbology-type" name="symbology-type" aria-label="symbology-type" required>
+        <option value="singleSymbol">Single symbol</option>
+        <option value="choropleth" disabled>Choropleth map</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-8" id="singleSymbolDetail">
+    <h5>Single symbol</h5>
+    <div class="row">
+      <h6>Fill options</h6>
+      <div class="col-md-4">
+        <div class="my-4">
+          <label for="symbology-fillColor">Color</label><br>
+          <input type="color" id="symbology-fillColor" name="symbology-fillColor" value="">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="my-4">
+          <label for="symbology-fillOpacity" class="form-label">Opacity</label>
+          <input type="range" class="form-range" min="0" max="1" step="0.1" id="symbology-fillOpacity" oninput="this.nextElementSibling.value = this.value">
+          <output id="symbology-fillOpacity-Output"></output>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <h6>Outline options</h6>
+      <div class="col-md-4">
+        <div class="my-4">
+          <label for="symbology-color">Color</label><br>
+          <input type="color" id="symbology-color" name="symbology-color" value="">
+        </div>
+        <div class="my-4">
+          <label class="form-label" for="symbology-weight">Weight</label>
+          <input type="number" id="symbology-weight" min="0" max="10" step="1" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="my-4">
+          <label for="symbology-opacity" class="form-label">Opacity</label>
+          <input type="range" class="form-range" min="0" max="1" step="0.1" id="symbology-opacity" oninput="this.nextElementSibling.value = this.value">
+          <output id="symbology-opacity-Output"></output>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="col-md-8" id="choroplethDetail">
+    <h5>Choropleth map</h5>
+    <div class="row">
+      <!-- <h6>Fill options</h6> -->
+      <label class="my-1 me-2" for="">Property</label>
+      <select class="form-select" id="" name="" aria-label="" required>
+        <option value="">OBJECTID</option>
+        <option value="">KOD_KRAJ</option>
+        <option value="">KOD_CZNUTS3</option>
+        <option value="">NAZ_CZNUTS3</option>
+        <option value="">POCET_OBYV</option>
+        <option value="">SHAPE_Length</option>
+        <option value="">SHAPE_Area</option>
+        <option value="">InPoly_FID</option>
+        <option value="">SimPgnFlag</option>
+        <option value="">MaxSimpTol</option>
+        <option value="">MinSimpTol</option>
+        <option value="" selected>Hustota</option>
+      </select>
+
+      <label class="my-1 me-2" for="">Color schema</label>
+      <select class="form-select" id="" name="" aria-label="" required>
+        <option value="" selected>White -> Red</option>
+        <option value="">White -> Blue</option>
+      </select>
+
+      <label class="my-1 me-2" for="">Intervals</label>
+      <select class="form-select" id="" name="" aria-label="" required>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label class="my-1 me-2" for="">Mode</label>
+      <select class="form-select" id="" name="" aria-label="" required>
+        <option value="" selected>Quantile</option>
+        <option value="">Equidistant</option>
+        <option value="">K-means</option>
+      </select>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="my-4">
+          <label for="">Outline color</label><br>
+          <input type="color" id="" name="" value="#383838">
+        </div>
+        <div class="my-4">
+          <label class="form-label" for="">Weight</label>
+          <input type="number" id="" min="0" max="10" step="1" value="3" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="my-4">
+          <label for="symbology-opacity" class="form-label">Fill opacity</label>
+          <input type="range" class="form-range" min="0" max="1" step="0.1" value="0.7" id="" oninput="this.nextElementSibling.value = this.value">
+          <output id="">0.7</output>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,200 @@
+<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+  <a class="navbar-brand me-lg-5" href="../../index.html">
+    <img class="navbar-brand-dark" src="assets/img/logo/logo_full_wh.png" alt="Volt logo" /> <img class="navbar-brand-light" src="assets/img/brand/dark.svg" alt="Volt logo" />
+  </a>
+  <div class="d-flex align-items-center">
+    <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+<nav class="navbar fixed-top navbar-top navbar-expand navbar-dashboard navbar-dark ps-4 pe-5 pb-3">
+  <div class="container-fluid px-0">
+    <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+      <div class="d-flex align-items-center">
+
+        <a class="navbar-brand" href="dashboard">
+          <img src="assets/img/logo/logo_full_wh.png" height="30" alt="">
+        </a>
+      </div>
+      <!-- Navbar links -->
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="media d-flex align-items-center">
+              <!-- <img class="avatar rounded-circle" alt="Image placeholder" src="assets/img/team/profile-picture-3.jpg"> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+              <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                <span class="mb-0 font-small fw-bold text-white">Profile</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
+            <a class="dropdown-item d-flex align-items-center" href="profile">
+              <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+              My Profile
+            </a>
+            <div role="separator" class="dropdown-divider my-1"></div>
+            <a class="dropdown-item d-flex align-items-center" href="auth/logout">
+              <svg class="dropdown-icon text-blue me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+              Log out
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<nav id="sidebarMenu" class="sidebar d-lg-block bg-white text-gray-800 collapse" data-simplebar>
+  <div class="sidebar-inner px-4 pt-3">
+    <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+      <div class="d-flex align-items-center">
+        <div class="avatar-lg me-4">
+          <!-- <img src="assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
+          alt="Bonnie Green"> -->
+          <a href="profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="d-block">
+          <a href="profile">
+            <h2 class="h5 mb-3">Profile</h2>
+          </a>
+          <a href="auth/logout" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+            <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+            Log Out
+          </a>
+        </div>
+      </div>
+      <div class="collapse-close d-md-none">
+        <a href="#sidebarMenu" data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+        aria-label="Toggle navigation">
+        <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </a>
+    </div>
+  </div>
+  <ul class="nav flex-column pt-3 pt-md-0">
+    <li id="menuDashboard" class="nav-item">
+      <a href="dashboard" class="nav-link">
+        <span class="sidebar-icon">
+          <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+        </span>
+        <span class="sidebar-text">Dashboard</span>
+      </a>
+    </li>
+    <li id="menuMaps" class="nav-item">
+      <a href="maps" class="nav-link d-flex justify-content-between">
+        <span>
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"></path></svg>
+          </span>
+          <span class="sidebar-text">Maps</span>
+        </span>
+      </a>
+    </li>
+    <li id="menuLayers" class="nav-item ">
+      <a href="layers" class="nav-link">
+        <span class="sidebar-icon">
+          <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
+            <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
+          </svg>
+        </span>
+        <span class="sidebar-text">Layers</span>
+      </a>
+    </li>
+    <li id="menuData" class="nav-item">
+      <a href="data" class="nav-link">
+        <span class="sidebar-icon">
+          <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z"/>
+            <path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+            <path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+            <path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+          </svg>
+        </span>
+        <span class="sidebar-text">Data</span>
+      </a>
+    </li>
+    <li id="menuAnalysis" class="nav-item">
+      <a href="analysis" class="nav-link d-flex justify-content-between">
+        <span>
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+            </svg>
+          </span>
+          <span class="sidebar-text">Analysis</span>
+        </span>
+      </a>
+    </li>
+    <li id="menuMarket" class="nav-item">
+      <a href="market" class="nav-link d-flex justify-content-between">
+        <span>
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+            </svg>
+          </span>
+          <span class="sidebar-text">Market</span>
+        </span>
+        <span>
+          <span class="badge badge-sm bg-secondary ms-1 text-gray-800">SOON</span>
+        </span>
+      </a>
+    </li>
+    <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+    <li class="nav-item">
+      <span
+      class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+      data-bs-toggle="collapse" data-bs-target="#submenu-support">
+      <span>
+        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+        </svg>
+        <span class="sidebar-text">Support</span>
+      </span>
+      <span class="link-arrow">
+        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+      </span>
+    </span>
+    <div class="multi-level collapse show" role="list" id="submenu-support" aria-expanded="false">
+      <ul class="flex-column nav">
+        <li id="menuDocs" class="nav-item ">
+          <a class="nav-link" href="docs">
+            <span class="sidebar-text">Documentation</span>
+          </a>
+        </li>
+        <li id="menuBlog" class="nav-item ">
+          <a class="nav-link" href="blog">
+            <span class="sidebar-text">Blog</span>
+            <span>
+              <span class="badge badge-sm bg-secondary ms-1 text-gray-800">SOON</span>
+            </span>
+          </a>
+        </li>
+        <li id="menuContact" class="nav-item ">
+          <a class="nav-link" href="../../index#contact" target="_blank">
+            <span class="sidebar-text">Contact us</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+</ul>
+</div>
+</nav>

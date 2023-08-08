@@ -1,0 +1,94 @@
+=======
+CZECH
+=======
+
+Pro spuštění aplikace MapSquare je nutné mít nainstalovaný Apache, PHP (ve verzi 8 a vyšší) a databázi MySQL/MariaDB.
+K tomu účelu je možné nainstalovat například XAMPP, který lze stáhnout z těchto webových stránek: https://www.apachefriends.org/. Tento návod bude dále používat k ilustraci instalace právě zmíněný XAMPP.
+
+
+INSTALACE
+
+1. Nainstalujte XAMPP
+2. Do složky htdocs (defaultně C:\xampp\htdocs) vložte celou složku mapsquare.
+3. Spusťte aplikaci XAMPP Control Panel a spusťte moduly Apache a MySQL.
+4. Do adresního řádku webového prohlížeče vložte http://localhost/phpmyadmin/index.php, čímž se dostanete do správy databáze phpMyAdmin.
+5. V levém panelu vytvořte novou databázi s názvem "mapsquare" (případně vlastním názvem) s kódováním utf8_czech_ci.
+6. V záložce Import vyberte soubor Databaze.sql a klikněte na tlačítko Import.
+7. V adresáři mapsquare/app/server/assets/config.php zadejte server, databázi a přihlašovací údaje k databázi. Defaultně server "localhost", username "root", heslo "", databáze "mapsquare".
+8. Nyní v adresáři apache/conf otevřete soubor httpd.conf a vložte do něj následující pasáž:
+
+
+RewriteEngine on
+ErrorDocument 404   http://localhost/mapsquare/app/dashboard
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+Tím zajístíme, že v URL nebude vidět přípona .php a HTTP status 404 přesměrujeme na hlavní stránku aplikace.
+9. Nainstalujte php_rar dle návodu https://www.php.net/manual/en/rar.installation.php#118276.
+10. V adresáři php otevřete soubor php.ini a přidejte extenzi php_rar.dll a php_zip.dll.
+
+extension=php_rar.dll
+extension=php_zip.dll
+
+11. Ve stejném souboru povolte extenzi pdo_mysql. Pokud je před následujícím řádkem znak ";", smažte ho.
+
+;extension=pdo_mysql    -------->   extension=pdo_mysql
+
+12. Pokud máte s předchozími dvěmi kroky problém, v adresáři je připraven soubor php.ini, kterým nahraďte váš soubor.
+13. V adresáři mapsquare/app/server/assets otevřete soubor config.php. Máte v něm možnost změnit např. URL adresu, verifikaci uživatelů a odesílání e-mailů.
+14. Restartujte v aplikaci XAMPP Control Panel moduly Apache a MySQL.
+15. Zadejte do URL adresy webového prohlížeče http://localhost/mapsquare/.
+
+
+Pozn. Pokud chcete využívat plugin Leaflet.reachability, vložte do souboru app/assets/js/analysis.js na řádek 73 vlastní API klíč ze služby OpenRouteService.
+
+
+
+=====================
+
+
+=======
+ENGLISH
+=======
+
+To run MapSquare, you must have Apache, PHP (version 8 and higher) and MySQL/MariaDB database installed.
+For this purpose, it is possible to install, for example, XAMPP, which can be downloaded from this website: https://www.apachefriends.org/. This tutorial will further use the just mentioned XAMPP to illustrate the installation.
+
+
+INSTALLATION
+
+1. Install XAMPP
+2. Put the entire mapsquare folder into the htdocs folder (default C:\xampp\htdocs).
+3. Start the XAMPP Control Panel application and run the Apache and MySQL modules.
+4. In the address bar of your web browser, type http://localhost/phpmyadmin/index.php to access the phpMyAdmin database management.
+5. In the left panel, create a new database named "mapsquare" (or a custom name) with utf8_czech_ci encoding.
+6. In the Import tab, select the Databaze.sql file and click the Import button.
+7. In the mapsquare/app/server/assets/config.php directory, enter the server, database, and database login credentials. Default server "localhost", username "root", password "", database "mapsquare".
+8. Now open the httpd.conf file in the apache/conf directory and insert the following passage:
+
+RewriteEngine on
+ErrorDocument 404   http://localhost/mapsquare/app/dashboard
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+This ensures that the .php extension is not visible in the URL and redirects the HTTP status 404 to the main page of the application.
+9. Install php_rar as instructed by https://www.php.net/manual/en/rar.installation.php#118276.
+10. In the php directory, open the php.ini file and add the php_rar.dll and php_zip.dll extensions.
+
+extension=php_rar.dll
+extension=php_zip.dll
+
+11. In the same file, enable the pdo_mysql extension. If the following line is preceded by a ";", delete it.
+
+;extension=pdo_mysql    -------->   extension=pdo_mysql
+
+12. If you have a problem with the previous two steps, there is a php.ini file in the directory ready to replace your file.
+13. In the mapsquare/app/server/assets directory, open the config.php file. In it you have the possibility to change e.g. the URL address, user verification and email sending.
+14. Restart the Apache and MySQL modules in the XAMPP Control Panel.
+15. Type http://localhost/mapsquare/ in the URL of your web browser.
+
+
+Note: If you want to use the Leaflet.reachability plugin, insert a custom API key from OpenRouteService into the app/assets/js/analysis.js file on line 73.
